@@ -1,0 +1,41 @@
+{
+  "name": "asana-rest-api",
+  "description": "A Node.js implementation for the Asana REST API.",
+  "tags": [
+    "asana",
+    "api",
+    "import",
+    "export",
+    "task",
+    "transfer",
+    "copy"
+  ],
+  "version": "0.6.0",
+  "author": "Joey van Dijk <contact@joeyvandijk.nl>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joeyvandijk/asana-rest-api"
+  },
+  "bugs": {
+    "url": "https://github.com/joeyvandijk/asana-rest-api/issues"
+  },
+  "license": "MIT",
+  "engines": [
+    "node >= 0.10.0"
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "JSONStream": "0.9.x",
+    "lodash": "2.4.x",
+    "request": "2.40.x"
+  },
+  "devDependencies":{
+    "tape": "2.14.x",
+    "faucet": "0.0.x",
+    "apidoc": "0.7.x"
+  },
+  "scripts": {
+    "test": "tape test/*.js | faucet --test",
+    "docs":"apidoc -i ./lib/ -o ./apidoc/"
+  }
+}
