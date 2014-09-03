@@ -1,9 +1,5 @@
 var fs = require('fs');
 
-//TODO implement REST
-//TODO implement import/export features (full)
-//TODO ? node-webkit for downloads?
-
 function API(key){
     //register API endpoint-scripts
     if(key === undefined){
@@ -27,12 +23,10 @@ function API(key){
             self[name]._parent = self;
         }
     });
-
-    //TODO return errors back from the API = not happening now!
 }
 
 module.exports = API;
 
 process.on('uncaughtException',function(err){
-    console.log('UNCAUGHT ERROR:',err.stack);
+    console.log('[Asana-rest-api] UNCAUGHT ERROR:',err.stack);
 })

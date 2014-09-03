@@ -1,0 +1,14 @@
+{
+    "name": "asana-rest-api",
+    "version": "0.6.0",
+    "description": "A Node.js implementation for the Asana REST API.",
+    "title": "Asana API Node.JS implementation",
+    "header": {
+        "title": "General",
+        "filename": "lib/docs/header.md"
+    },
+    "template": {
+        "withCompare": true,
+        "withGenerator": true
+    }
+}

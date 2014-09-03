@@ -31,8 +31,7 @@
   },
   "devDependencies":{
     "tape": "2.14.x",
-    "faucet": "0.0.x",
-    "apidoc": "0.7.x"
+    "faucet": "0.0.x"
   },
   "scripts": {
     "test": "tape test/*.js | faucet --test",
