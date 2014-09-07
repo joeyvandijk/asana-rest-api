@@ -19,7 +19,7 @@ How to use this [NPM](https://npmjs.org) module can be found at [joeyvandijk.git
 
 # EXAMPLE
 
-To get started this module support streaming (*streams2*) and callbacks, but to get an idea about the way the API is set up see example below or have a look at the [documentation](https://joeyvandijk.github.io/asana-rest-api).
+To get started this module supports streaming (*streams2*) and callbacks, but to get an idea about the way the API is set up see the example below or have a look at the [documentation](https://joeyvandijk.github.io/asana-rest-api).
 
 ```javascript
 var asana = require('asana-rest-api');
