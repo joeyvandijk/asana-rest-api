@@ -4,13 +4,16 @@ var read = require('./../lib/read');
 
 var p;
 
-function wait(type,msg){
+function wait(type,msg,end){
     //timeout needed for using the streams2 setup with an error message
     setTimeout(function(){
         if(type === 'error'){
             msg = new Error(msg)
         }
         p.emit(type,msg);
+        if(end){
+            p.push(null);
+        }
     },10);
 }
 
@@ -33,18 +36,18 @@ module.exports = {
                         wait('error','Provide a key to authorize your API request.');
                     }
                     if(typeof json.workspace === 'string' && !_.isEmpty(json.workspace)){
-                        wait('workspace',json.workspace,'utf8');
+                        wait('workspace',json.workspace,'utf8',true);
                     }else{
-                        wait('error','Provide a workspace to execute in.');
+                        wait('error','Provide a workspace to execute in.',true);
                     }
                 }catch(e){
-                    wait('error','Invalid config.json file format, please use JSON with key property. ('+ e.toString()+')');
+                    wait('error','Invalid config.json file format, please use JSON with key property. ('+ e.toString()+')',true);
                 }
             }).on('error',function(err){
-                wait('error','Could not retrieve file: '+err.toString());
+                wait('error','Could not retrieve file: '+err.toString(),true);
             });
         }else{
-            wait('error',new Error('File config.json does not exist'));
+            wait('error',new Error('File config.json does not exist'),true);
         }
         return p;
     },

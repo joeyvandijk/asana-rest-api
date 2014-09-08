@@ -23,6 +23,9 @@ function API(key){
             self[name]._parent = self;
         }
     });
+
+    //add batch functionality
+    this.batch = require('./lib/batch');
 }
 
 module.exports = API;
