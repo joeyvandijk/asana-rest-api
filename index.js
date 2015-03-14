@@ -32,4 +32,5 @@ module.exports = API;
 
 process.on('uncaughtException',function(err){
     console.log('[Asana-rest-api] UNCAUGHT ERROR:',err.stack);
+    process.exit(1);
 })
