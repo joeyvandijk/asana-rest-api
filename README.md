@@ -1,8 +1,18 @@
+# REMARK
+Due to the arrival of the **[official](https://github.com/Asana/node-asana/)** Node.JS library for the [Asana](https://www.asana.com) REST API, I have decided ***not*** to proceed finishing this library. This repository is only ment for reference and will ***not be supported*** any more.
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+# LEGACY
+
 This is a [NPM](https://npmjs.org) module which can be used with [NodeJS](https://www.nodejs.org) as a tool for:
 
 * calling the [Asana](https://www.asana.com) REST API.
 
-# ROADMAP
+## ROADMAP
 
 * ```0.7.0``` export
   * your tasks into a ```json```-file
@@ -13,11 +23,11 @@ This is a [NPM](https://npmjs.org) module which can be used with [NodeJS](https:
 * ```0.9.0``` OAuth support
 * ```1.0.0``` bugfixes
 
-# DOCUMENTATION
+## DOCUMENTATION
 
 How to use this [NPM](https://npmjs.org) module can be found at [joeyvandijk.github.io/asana-rest-api](https://joeyvandijk.github.io/asana-rest-api) or use the ```test/``` directory for test examples.
 
-# EXAMPLE
+## EXAMPLE
 
 To get started this module supports streaming (*streams2*) and callbacks, but to get an idea about the way the API is set up see the example below or have a look at the [documentation](https://joeyvandijk.github.io/asana-rest-api).
 
